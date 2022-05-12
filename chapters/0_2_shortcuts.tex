@@ -1,0 +1,27 @@
+\chapter{Abkürzungsverzeichnis}
+
+% Change lengths for nicer output
+\newlength{\olditemsep}
+\newlength{\oldparskip}
+\setlength{\olditemsep}{\itemsep}
+\setlength{\oldparskip}{\parskip}
+\setlength{\itemsep}{2pt}
+\setlength{\parskip}{2pt}
+
+\begin{acronym}[title=Abkürzungsverzeichnis]
+	\acro{LZ}{Lebenszyklus}
+	\acro{PSP}{Projektstrukturplan}
+	\acro{AP}{Arbeitspaket}
+	\acro{UI}{User Interface}
+	\acro{AD}{Agreement Documentation}
+	\acro{RTM}{Real-Time-Margin}
+	\acro{ANW}{Agreement Negotiation Workbench}
+	
+\end{acronym}
+
+% Reset lengths
+\setlength{\itemsep}{\olditemsep}
+\setlength{\parskip}{\oldparskip}
+
+
+% mit \acp{abkürzung} kann ich Abkürzungen refferieren

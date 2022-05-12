@@ -1,0 +1,58 @@
+\documentclass[oneside, 12pt, a4paper]{book}
+
+% Aufgaben 
+\usepackage{todonotes}
+% Seitenlayout 
+\usepackage[ % Seitenlayout bestimmen für das gesamte Dokument
+	left=2.5cm,
+	right=3.5cm,
+	top=2.5cm,
+	bottom=2cm,
+	%includeheadfoot
+]{geometry}
+\usepackage[T1]{fontenc} % Westeuropäische Sprachen werden hiermit unterstützt
+\usepackage[ngerman]{babel}
+\usepackage{times} % Times New Roman Schriftart 
+\usepackage[onehalfspacing]{setspace} % 1.5 Zeilenabstand
+\usepackage{acronym} % Abkürzungen & Abkürzungsverzeichnis
+\usepackage{graphicx} % Bilder einfügen in das Dokument
+\usepackage[hidelinks]{hyperref} % Kreuzreferenzen & Verlinkung
+
+
+% Quellen:
+\usepackage[backend=biber, style=authoryear]{biblatex} %BibLaTeX zum zitieren
+\usepackage[autostyle=true]{csquotes}
+\addbibresource{sources.bib}
+
+% Import of the different Shortcuts
+\input{commandsDocument.tex}
+
+
+
+\begin{document}
+	
+	% Vorderer Abspann
+	\frontmatter
+	
+	\pagenumbering{Roman}
+	\input{chapters/0_0_titlePage.tex}
+	
+	
+	\input{chapters/0_1_introduction.tex}
+	\tableofcontents
+	\listoffigures
+	\input{chapters/0_2_shortcuts.tex}
+	\newpage
+	
+	
+	% Hauptdokument
+	\mainmatter
+	\input{chapters/1_0_projektablauf.tex}
+	\input{chapters/3_0_requirementsCustomizing.tex}
+	\input{chapters/4_0_gicomSpezification.tex}
+	\input{chapters/6_0_Umsetzung.tex}
+	\input{chapters/5_0_fazit.tex}
+	
+	
+	\printbibliography
+\end{document}
